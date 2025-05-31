@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -95,6 +96,14 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+	{ 0,			XF86XK_AudioPlay,    spawn,       SHCMD("playerctl play-pause") },
+	{ 0,			XF86XK_AudioStop,    spawn,       SHCMD("playerctl stop") },
+	{ 0,			XF86XK_AudioNext,    spawn,       SHCMD("playerctl next") },
+	{ 0,			XF86XK_AudioPrev,    spawn,       SHCMD("playerctl previous") },
+	{ 0,			XF86XK_AudioMute,    spawn,       SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") },
+	{ 0,			XF86XK_AudioLowerVolume,    spawn,       SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-") },
+	{ 0,			XF86XK_AudioRaiseVolume,    spawn,       SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+") },
 };
 
 /* button definitions */

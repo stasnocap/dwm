@@ -106,7 +106,7 @@ static const Key keys[] = {
 	{ 0,			XF86XK_AudioRaiseVolume,    spawn,       SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+") },
 
 	{ MODKEY,			XK_w,          spawn,      {.v = (const char*[]){ "qutebrowser", NULL } } },
-	{ MODKEY,			XK_t,          spawn,      {.v = (const char*[]){ "telegram-desktop", NULL } } },
+	{ MODKEY,			XK_t,          spawn,      {.v = (const char*[]){ "Telegram", NULL } } },
 };
 
 /* button definitions */

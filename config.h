@@ -105,7 +105,7 @@ static const Key keys[] = {
 	{ 0,			XF86XK_AudioLowerVolume,    spawn,       SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-") },
 	{ 0,			XF86XK_AudioRaiseVolume,    spawn,       SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+") },
 
-	{ MODKEY,			XK_w,          spawn,      {.v = (const char*[]){ "qutebrowser", NULL } } },
+	{ MODKEY,			XK_w,          spawn,      {.v = (const char*[]){ "brave", NULL } } },
 	{ MODKEY,			XK_t,          spawn,      {.v = (const char*[]){ "Telegram", NULL } } },
 };
 
